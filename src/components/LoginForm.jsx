@@ -113,7 +113,7 @@ function LoginForm({ onSuccess }) {
       </p>
 
       <p className="signup-text">
-        Not an existing user? <Link to="#" className="signup-link">Sign up for demo</Link>
+        Not an existing user? <Link to="/register" className="signup-link">Sign up for demo</Link>
       </p>
     </div>
   );
