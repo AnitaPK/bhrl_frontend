@@ -1,0 +1,153 @@
+.login-form-container {
+  width: 100%;
+  background: #fff;
+  border-radius: 26px;
+  padding: 48px 52px;
+  box-shadow: 0 35px 65px rgba(16, 56, 120, 0.18);
+}
+
+.login-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f1a3a;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  font-size: 15px;
+  color: #5a6074;
+  margin-bottom: 28px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1d2f;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  padding: 14px 16px;
+  border: 1px solid #dfe4f2;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0f1a3a;
+  transition: all 0.3s ease;
+  background-color: #fbfcff;
+}
+
+.form-input:focus {
+  border-color: #2a6cf4;
+  box-shadow: 0 0 0 2px rgba(42, 108, 244, 0.15);
+  outline: none;
+  background-color: #fff;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.remember-me {
+  margin: 0;
+}
+
+.remember-me .form-check-input {
+  border-radius: 4px;
+}
+
+.remember-me .form-check-label {
+  font-size: 14px;
+  color: #242b3c;
+  margin-left: 8px;
+}
+
+.forgot-password-link {
+  font-size: 14px;
+  color: #2a6cf4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.signin-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2a6cf4, #1d5bdd);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signin-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 25px rgba(42, 108, 244, 0.25);
+}
+
+.signin-button:disabled {
+  background: #b0b9d6;
+  box-shadow: none;
+}
+
+.login-error {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.terms-text {
+  font-size: 12px;
+  color: #6a6f85;
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.terms-link {
+  color: #2a6cf4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.signup-text {
+  font-size: 14px;
+  color: #1b2236;
+  text-align: center;
+  margin: 0;
+}
+
+.signup-link {
+  color: #2a6cf4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .login-form-container {
+    padding: 32px 28px;
+    border-radius: 20px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+

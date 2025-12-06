@@ -1,0 +1,252 @@
+.add-patient-modal .modal-content {
+  border: 2px solid #DC143C;
+  border-radius: 22px;
+  outline: 1rem solid #fff;
+}
+
+.modal-header-custom {
+  border-bottom: 2px solid #DC143C;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.modal-title-custom {
+  color: #DC143C;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+.modal-search {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-search-input {
+  padding: 6px 12px 6px 35px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 12px;
+  width: 250px;
+}
+
+.modal-search-input:focus {
+  outline: none;
+  border-color: #DC143C;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #DC143C;
+}
+
+.modal-body-custom {
+  padding: 25px 32px 28px;
+}
+
+.required-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.required-label::after {
+  content: '*';
+  color: #DC143C;
+  margin-left: 3px;
+}
+
+.title-select {
+  max-width: 80px;
+  border-right: none;
+}
+
+.icon-input-group {
+  background-color: #f8f9fa;
+  border-left: none;
+  border-right: none;
+  color: #666;
+  /* Make icon box consistent size and center icon */
+  width: 44px;
+  min-width: 44px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 18px;
+}
+
+/* Ensure SVG icons inside input-group-text have consistent size */
+.icon-input-group svg,
+.icon-input-group i {
+  width: 20px;
+  height: 20px;
+}
+
+.gender-buttons {
+  width: auto;
+}
+
+.gender-buttons .btn {
+  min-width: 60px;
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 6px 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.gender-buttons .btn:first-child {
+  margin-left: 0;
+}
+
+.gender-buttons .btn:last-child {
+  margin-right: 0;
+}
+
+.readonly-field {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.modal-actions-inline {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  gap: 10px;
+}
+
+.field-error {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #dc3545;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.save-opd-button {
+  padding: 10px 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.save-icon {
+  font-size: 16px;
+}
+
+.save-next-button {
+  padding: 10px 30px;
+  font-weight: 500;
+  background-color: #0066CC;
+  border: none;
+}
+
+.save-next-button:hover {
+  background-color: #0052a3;
+}
+
+@media (max-width: 768px) {
+  .modal-search {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .modal-search-input {
+    width: 100%;
+  }
+
+  .modal-header-custom {
+    flex-wrap: wrap;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .save-opd-button,
+  .save-next-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Additional alignment fixes: stack and align inputs consistently */
+.add-patient-modal .modal-body-custom .row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.add-patient-modal .modal-body-custom .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.add-patient-modal .modal-body-custom .form-group label,
+.add-patient-modal .modal-body-custom .form-group .form-label {
+  margin-bottom: 6px;
+}
+
+.add-patient-modal .modal-body-custom .input-group,
+.add-patient-modal .modal-body-custom .btn-group {
+  display: flex;
+  align-items: center;
+}
+
+.add-patient-modal .modal-body-custom textarea.form-control {
+  min-height: 72px;
+  resize: vertical;
+}
+
+/* Ensure RegNo and OPD Save button align visually */
+.modal-actions-inline {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.save-opd-button, .save-next-button {
+  line-height: 1.2;
+}
+
+@media (max-width: 576px) {
+  .modal-actions-inline {
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+}
+

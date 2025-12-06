@@ -1,0 +1,27 @@
+.error-boundary-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-boundary-alert {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.error-details {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.error-details pre {
+  margin-bottom: 0;
+  color: #dc3545;
+  font-family: 'Courier New', Courier, monospace;
+}

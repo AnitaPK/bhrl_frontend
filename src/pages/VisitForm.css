@@ -1,0 +1,543 @@
+.visit-form-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.visit-form-container {
+  flex: 1;
+  /* background-color: #f5f5f5; */
+  padding: 15px;
+}
+
+.visit-form-card {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.visit-form-card .card-body {
+  padding: 20px;
+}
+
+.visit-patient-header-card {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.visit-patient-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #28a745;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Top Control Bar */
+.visit-control-btn {
+  border: 1px solid #9dd4b3;
+  color: #333;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 3px;
+  background-color: #c5e8d6;
+}
+
+.patient-info-bar {
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.new-badge {
+  background-color: #e8f1ff;
+  border: 1px solid #b8d4ff;
+  color: #0066cc;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.search-btn {
+  color: #666;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+/* Vitals Section */
+.vitals-row {
+  display: flex;
+  gap: 10px;
+}
+
+.vitals-input-box {
+  background-color: #f0f4ff;
+  padding: 12px;
+  border: 1px solid #b8d4e6;
+  border-radius: 4px;
+  text-align: center;
+  flex: 1;
+}
+
+.vitals-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.bp-input-compact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+.bp-field {
+  width: 40px;
+  padding: 6px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.bp-slash {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  margin: 0 2px;
+}
+
+.vitals-field {
+  padding: 6px 8px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.vitals-unit {
+  font-size: 11px;
+  color: #666;
+  font-weight: 600;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Form Labels */
+.form-section-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Yellow Text Areas */
+.form-textarea-yellow {
+  background-color: #ffffeb;
+  border: 1px solid #e0e0a0;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  min-height: 60px;
+  resize: vertical;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-textarea-yellow:focus {
+  background-color: #fffef5;
+  border-color: #d4d480;
+  box-shadow: 0 0 0 0.2rem rgba(224, 224, 160, 0.25);
+}
+
+/* Obstetric Row */
+.obstetric-row {
+  display: flex;
+  gap: 10px;
+}
+
+.obstetric-field {
+  background-color: #f0f4ff;
+  padding: 10px;
+  border: 1px solid #b8d4e6;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.obstetric-field .form-label {
+  margin-bottom: 6px;
+}
+
+.ga-inputs {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+.ga-field {
+  width: 70px;
+  padding: 6px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.ga-divider {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Examination Fields - Blue boxes */
+.exam-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+  text-transform: capitalize;
+}
+
+.exam-input {
+  padding: 8px 10px;
+  border: 1px solid #b8d4e6;
+  border-radius: 3px;
+  font-size: 13px;
+  background-color: #f0f4ff;
+  width: 100%;
+}
+
+.exam-input:focus {
+  background-color: #f8fbff;
+  border-color: #7fb5d5;
+  box-shadow: 0 0 0 0.2rem rgba(184, 212, 230, 0.25);
+}
+
+/* Medicines Table */
+.medicines-table {
+  font-size: 12px;
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.medicines-table thead {
+  background-color: #b8d4ff;
+  color: #000;
+}
+
+.medicines-table thead th {
+  border: 1px solid #999;
+  padding: 10px 6px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 11px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.medicines-table tbody td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.medicines-table tbody tr:nth-child(odd) {
+  background-color: #f5f8ff;
+}
+
+.medicines-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.medicines-table .form-select,
+.medicines-table .form-control {
+  font-size: 11px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  height: auto;
+  width: 100%;
+}
+
+.medicines-table .form-select:focus,
+.medicines-table .form-control:focus {
+  border-color: #b8d4e6;
+  box-shadow: 0 0 0 0.2rem rgba(184, 212, 230, 0.25);
+}
+
+/* Next Visit Container */
+.next-visit-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.next-visit-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.next-visit-or {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Action Buttons */
+.action-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 10px;
+}
+
+.btn-save {
+  background-color: #2E7FD8;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+  background-color: #1e5ba8;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(46, 127, 216, 0.3);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebb57;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.3);
+}
+
+.btn-export {
+  background-color: #0dcaf0;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-export:hover {
+  background-color: #0ba8c2;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(13, 202, 240, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #2E7FD8;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.btn-primary:hover {
+  background-color: #1e5ba8;
+}
+
+.btn-outline-primary {
+  border: 1px solid #2E7FD8;
+  color: #2E7FD8;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2E7FD8;
+  color: white;
+}
+
+.back-button {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #2E7FD8;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .vitals-input-box {
+    padding: 10px;
+  }
+
+  .medicines-table {
+    font-size: 11px;
+  }
+
+  .medicines-table thead th,
+  .medicines-table tbody td {
+    padding: 6px 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visit-form-container {
+    padding: 10px;
+  }
+
+  .visit-form-card .card-body {
+    padding: 15px;
+  }
+
+  .vitals-input-box {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .vitals-label {
+    font-size: 11px;
+  }
+
+  .vitals-unit {
+    font-size: 10px;
+  }
+
+  .bp-field {
+    width: 35px;
+    padding: 4px;
+    font-size: 11px;
+  }
+
+  .section-title {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .medicines-table {
+    font-size: 10px;
+  }
+
+  .medicines-table thead th,
+  .medicines-table tbody td {
+    padding: 4px 2px;
+  }
+
+  .action-buttons-container {
+    flex-direction: column;
+  }
+
+  .btn-save,
+  .btn-whatsapp,
+  .btn-export {
+    width: 100%;
+    padding: 10px 16px;
+  }
+
+  .next-visit-container {
+    flex-direction: column;
+  }
+
+  .next-visit-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .vitals-input-box {
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+
+  .form-textarea-yellow {
+    min-height: 50px;
+    font-size: 12px;
+  }
+
+  .medicines-table {
+    font-size: 9px;
+  }
+
+  .medicines-table thead th {
+    padding: 3px 1px;
+  }
+
+  .medicines-table tbody td {
+    padding: 3px 1px;
+  }
+}
+
+
+
+

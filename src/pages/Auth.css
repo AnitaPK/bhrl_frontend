@@ -1,0 +1,115 @@
+.login-page {
+  height: 100vh;
+  background: linear-gradient(135deg, #f5fbff 0%, #eef2ff 40%, #fdfdff 100%);
+  overflow: hidden;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="8" fill="%23DC143C"/><circle cx="16" cy="16" r="6" fill="none" stroke="%232E7FD8" stroke-width="2"/></svg>') 16 16, auto;
+}
+
+.login-header {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 32px 60px 12px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 30px rgba(17, 47, 101, 0.05);
+}
+
+.login-container {
+  height: calc(100vh - 160px);
+  padding: 0;
+  overflow: auto;
+}
+
+.left-section {
+  background-color: #ffffff;
+  padding: 60px 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.left-content {
+  width: 100%;
+  max-width: 520px;
+}
+
+.doctors-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right-section {
+  /* background-color: #f6f8fc; */
+  padding: 60px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-content {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* Funky Cursor Animation */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 20, 60, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 20, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 20, 60, 0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .login-header {
+    padding: 28px 40px 10px;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .login-header {
+    padding: 24px 24px 8px;
+  }
+
+  .login-page {
+    background: #ffffff;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 40px 30px;
+  }
+
+  .left-section {
+    border-bottom: 1px solid #e0e4f0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-header {
+    padding: 20px 16px 6px;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 28px 20px;
+  }
+
+  .right-content {
+    max-width: none;
+  }
+}

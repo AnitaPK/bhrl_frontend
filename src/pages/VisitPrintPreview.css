@@ -1,0 +1,361 @@
+/* Print Preview Styles */
+.print-page-wrapper {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.print-controls {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.print-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.print-page {
+  background-color: white;
+  width: 8.5in;
+  height: 11in;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  page-break-after: always;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Header Section */
+.print-header {
+  margin-bottom: 15px;
+  height: 250px;
+}
+
+.hospital-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.hospital-logo {
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.hospital-details {
+  flex: 1;
+}
+
+.hospital-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+  text-align: center;
+}
+
+.hospital-contact {
+  font-size: 11px;
+  margin: 3px 0 0 0;
+  color: #555;
+  text-align: center;
+}
+
+.header-divider {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #333;
+}
+
+/* Patient Info & Visit Header */
+.visit-header-section {
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.patient-info {
+  margin: 0;
+}
+
+.info-line {
+  margin: 3px 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.visit-date {
+  margin: 3px 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Vitals Section */
+.vitals-section {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.vitals-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.section-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Rx/Prescription Section */
+.rx-section {
+  margin: 12px 0;
+  padding: 8px 0;
+}
+
+.rx-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #222;
+}
+
+.prescription-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+.prescription-table thead {
+  background-color: #e8e8e8;
+}
+
+.prescription-table th {
+  border: 1px solid #666;
+  padding: 8px 6px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 11px;
+  color: #222;
+}
+
+.prescription-table td {
+  border: 1px solid #999;
+  padding: 8px 6px;
+  vertical-align: top;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.prescription-table strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.medicine-composition {
+  display: block;
+  color: #555;
+  font-size: 10px;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+.medicine-note {
+  font-size: 10px;
+  color: #555;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+/* Advice Section */
+.advice-section {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fffef5;
+  border-left: 4px solid #d4c896;
+}
+
+/* Tests Section */
+.tests-section {
+  margin: 8px 0;
+}
+
+.tests-title {
+  margin: 0 0 4px 0;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.tests-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 10px;
+}
+
+.tests-list li {
+  margin: 2px 0;
+}
+
+/* Next Visit Section */
+.next-visit-section {
+  margin: 8px 0;
+  padding: 6px;
+  background-color: #f0f4ff;
+  border-left: 3px solid #b8d4e6;
+}
+
+.next-visit-text {
+  margin: 0;
+  font-size: 10px;
+}
+
+/* Footer Section */
+.print-footer {
+  margin-top: 15px;
+  padding-top: 10px;
+  font-size: 9px;
+}
+
+.footer-divider {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #333;
+}
+
+.footer-doctor-info {
+  padding: 8px 0;
+}
+
+.footer-label {
+  font-weight: 700;
+  font-size: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2px;
+}
+
+.footer-name {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 10px;
+}
+
+.footer-qualification {
+  font-size: 9px;
+  color: #666;
+  margin: 1px 0;
+}
+
+/* Print Media Styles */
+@media print {
+  /* Hide browser headers and footers - use margin trick */
+  @page {
+    margin: 0;
+  }
+
+  /* Reset all margins and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Hide non-print elements */
+  .no-print,
+  .print-controls,
+  header,
+  nav,
+  footer,
+  .navbar {
+    display: none !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+
+  .print-page-wrapper {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .print-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .print-page {
+    width: 100%;
+    height: auto;
+    padding: 0.5in;
+    box-shadow: none;
+    page-break-after: always;
+    margin: 0;
+  }
+
+  /* Avoid breaking inside elements */
+  .rx-section,
+  .section,
+  .patient-info {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure proper sizing */
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  /* Font sizing for print */
+  html {
+    font-size: 12pt;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+}
+
+/* Responsive for screen view */
+@media screen {
+  .print-page {
+    margin: 20px auto;
+    border: 1px solid #ddd;
+  }
+}

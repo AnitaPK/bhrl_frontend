@@ -1,0 +1,66 @@
+.logo-branding {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-mark img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+/* Base heading text */
+/* .hospital-name {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #194f9a;
+  white-space: nowrap;
+} */
+
+/* Reflection effect similar to sample image */
+.reflected-header {
+  /* Text Style */
+  color: #004499; /* Deep Blue */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 32px;
+  font-weight: bold;
+  user-select: none;
+  display: inline-block; /* Helps contain the reflection effect */
+  
+  /* --- Reflection Effect (WebKit) --- */
+  -webkit-box-reflect: 
+    /* 1. Position: below */
+    below 
+    
+    /* 2. Gap: POSITIVE value creates the space */
+    -25px 
+    
+    /* 3. Mask: The linear gradient handles the fade */
+    linear-gradient(
+      transparent, /* Start: Full opacity */
+      transparent 15%, /* Hold reflection visibility */
+      rgba(255, 255, 255, 0.4) 60%, /* Fade out using white (for white background) */
+      rgba(255, 255, 255, 0.9) /* Almost completely hidden */
+    );
+    
+  /* For a slightly softer look */
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); 
+}
+
+
+@media (max-width: 768px) {
+  .logo-branding {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hospital-name {
+    font-size: 22px;
+    white-space: normal;
+  }
+}
+

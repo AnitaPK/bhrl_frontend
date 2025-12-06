@@ -1,0 +1,133 @@
+.patients-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+}
+
+.patients-page-container {
+  flex: 1;
+}
+
+.patients-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.patients-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.patients-subtitle {
+  margin-bottom: 0;
+  color: #6c757d;
+}
+
+.patients-search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.patients-search-input {
+  max-width: 360px;
+}
+
+.patients-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.patients-loading,
+.patients-empty-state {
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.patients-table-wrapper {
+  padding: 0.75rem 1rem 0.75rem;
+}
+
+.patients-table thead tr {
+  background: #f0f4ff;
+}
+
+.patients-table thead th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.patients-table tbody tr.patients-row {
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.patients-table tbody tr.patients-row:hover {
+  background-color: #f9fafb;
+}
+
+.patients-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.patients-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.patients-name {
+  font-weight: 600;
+}
+
+.patients-meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.patients-visit-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background-color: #ecfdf3;
+  color: #166534;
+  font-size: 0.75rem;
+  border: 1px solid #bbf7d0;
+}
+
+.patients-pagination-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+}
+
+.patients-pagination-info {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.patients-pagination-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
