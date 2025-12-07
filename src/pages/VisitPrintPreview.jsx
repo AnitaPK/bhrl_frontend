@@ -128,18 +128,7 @@ function VisitPrintPreview() {
         <div className="print-page">
           {/* Header */}
           <div className="print-header">
-            {/* <div className="hospital-info">
-              <div className="hospital-logo">
-                <span className="logo-icon">🏥</span>
-              </div>
-              <div className="hospital-details">
-                <h2 className="hospital-name">Bhavsar Hospital and Research, Latur</h2>
-                <p className="hospital-contact">
-                  Contact: 9876543210 | Email: info@bhavsar.com
-                </p>
-              </div>
-            </div>
-            <hr className="header-divider" /> */}
+            
           </div>
 
           {/* Patient Info & Visit Details */}
@@ -147,9 +136,9 @@ function VisitPrintPreview() {
             <Row>
               <Col md={6}>
                 <div className="patient-info">
-                  <p className="info-line">
+                  {/* <p className="info-line">
                     <strong>Patient ID:</strong> {patient.id}
-                  </p>
+                  </p> */}
                   <p className="info-line">
                     <strong>Name:</strong> {patient.full_name}
                   </p>
@@ -300,29 +289,6 @@ function VisitPrintPreview() {
             </div>
           )}
 
-          {/* Footer */}
-          <div className="print-footer">
-            {/* <hr className="footer-divider" />
-            <Row>
-              <Col md={6}>
-                <div className="footer-doctor-info">
-                  <p className="footer-label">Doctor Details</p>
-                  <p className="footer-name">Dr. XXXX XXXXXX</p>
-                  <p className="footer-qualification">MBBS MD</p>
-                  <p className="footer-qualification">Fellowship in Critical Care Medicine</p>
-                  <p className="footer-qualification">PgCC Diabetology</p>
-                </div>
-              </Col>
-              <Col md={6}>
-                <div className="footer-doctor-info text-end">
-                  <p className="footer-label">Co-Doctor Details</p>
-                  <p className="footer-name">Dr. YYYY YYYYYY</p>
-                  <p className="footer-qualification">MBBS DoD</p>
-                  <p className="footer-qualification">Fellowship in Infertility & Laparoscopy</p>
-                </div>
-              </Col>
-            </Row> */}
-          </div>
         </div>
       </div>
     </div>
