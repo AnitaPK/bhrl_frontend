@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import api from '../utils/api';
-import { setAuthToken, setUser } from '../utils/auth';
+import { setAuthToken, fetchUserInfo } from '../utils/auth';
 import './LoginForm.css';
 
 function LoginForm({ onSuccess }) {
@@ -30,14 +30,25 @@ function LoginForm({ onSuccess }) {
     setLoading(true);
 
     try {
+      // Step 1: Login and get token
       const response = await api.post('/auth/login', {
         email: formData.email,
         password: formData.password,
       });
-      const { token, user } = response.data;
+      const { token } = response.data;
 
+      // Step 2: Save token
       setAuthToken(token);
-      setUser(user);
+
+      // Step 3: Fetch user info from backend
+      const user = await fetchUserInfo();
+      
+      if (!user) {
+        setError('Failed to fetch user information');
+        setAuthToken(null);
+        return;
+      }
+
       toast.success('Login successful!');
       onSuccess();
     } catch (err) {

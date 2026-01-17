@@ -1,5 +1,5 @@
 import './LogoBranding.css';
-import logo from '../assets/BHRLOGO.png';
+import logo from '../assets/AAAPlus.jpeg';
 
 function LogoBranding() {
   return (
@@ -7,11 +7,11 @@ function LogoBranding() {
       <div className="logo-mark">
         <img src={logo} alt="BHRL-logo" />
       </div>
-      <div className="">
+      {/* <div className="">
         <div className="reflected-header">
           Bhavsar Hospital and Research, Latur
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }

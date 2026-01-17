@@ -28,7 +28,7 @@ function App() {
   return (
     <Router>
       <div className="app-wrapper">
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route
             path="/login"

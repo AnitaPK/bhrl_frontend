@@ -89,6 +89,16 @@ function VisitPrintPreview() {
     });
   };
 
+  const formatDateOnly = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-IN', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+  };
+
   const calculateAge = (dateOfBirth) => {
     if (!dateOfBirth) return '';
     const today = new Date();
@@ -162,7 +172,7 @@ function VisitPrintPreview() {
           {/* Vitals */}
           {(visit.bp_systolic ||
             visit.pulse ||
-            visit.temp_c ||
+            visit.temp_f ||
             visit.spo2 ||
             visit.weight_kg ||
             visit.height_cm) && (
@@ -172,7 +182,7 @@ function VisitPrintPreview() {
                 <strong className="ms-2">Pulse</strong> {visit.pulse} bpm | 
                 <strong className="ms-2">Height</strong> {visit.height_cm} cm | 
                 <strong className="ms-2">Weight</strong> {visit.weight_kg} kg | 
-                <strong className="ms-2">Temperature</strong> {visit.temp_c} °F | 
+                <strong className="ms-2">Temperature</strong> {visit.temp_f} °F | 
                 <strong className="ms-2">BMI</strong> {visit.bmi} kg/m² | 
                 <strong className="ms-2">SpO₂</strong> {visit.spo2} %
               </p>
@@ -279,11 +289,21 @@ function VisitPrintPreview() {
               <p className="next-visit-text">
                 <strong>Follow-up / Next Visit:</strong>
                 {visit.next_visit_days && visit.next_visit_date ? (
-                  <span> After {visit.next_visit_days} days on {formatDate(visit.next_visit_date).split(' ')[0]}</span>
+                  <span> After {visit.next_visit_days} days on {formatDateOnly(visit.next_visit_date)}</span>
                 ) : visit.next_visit_days ? (
-                  <span> After {visit.next_visit_days} days</span>
+                  // compute future date from visit_date + days
+                  (() => {
+                    try {
+                      const base = visit.visit_date ? new Date(visit.visit_date) : new Date();
+                      const future = new Date(base);
+                      future.setDate(future.getDate() + parseInt(visit.next_visit_days, 10));
+                      return <span> After {visit.next_visit_days} days on {formatDateOnly(future.toISOString())}</span>;
+                    } catch (e) {
+                      return <span> After {visit.next_visit_days} days</span>;
+                    }
+                  })()
                 ) : (
-                  <span> {formatDate(visit.next_visit_date)}</span>
+                  <span> {formatDateOnly(visit.next_visit_date)}</span>
                 )}
               </p>
             </div>

@@ -1,7 +1,5 @@
 .add-patient-modal .modal-content {
-  border: 2px solid #DC143C;
   border-radius: 22px;
-  outline: 1rem solid #fff;
 }
 
 .modal-header-custom {

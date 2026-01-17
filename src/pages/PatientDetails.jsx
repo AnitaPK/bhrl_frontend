@@ -12,7 +12,13 @@ import {
   Table,
   Form,
 } from "react-bootstrap";
-import { FiArrowLeft, FiCalendar, FiUser, FiClock, FiPrinter } from "react-icons/fi";
+import {
+  FiArrowLeft,
+  FiCalendar,
+  FiUser,
+  FiClock,
+  FiPrinter,
+} from "react-icons/fi";
 import api from "../utils/api";
 import DashboardNavbar from "../components/DashboardNavbar";
 import Footer from "../components/Footer";
@@ -115,10 +121,9 @@ function PatientDetails() {
       setSavingMedicines(true);
       setSaveMedicinesError("");
 
-      const response = await api.post(
-        `/visits/${selectedVisit.id}/medicines`,
-        { medicines: selectedVisit.Medicines }
-      );
+      const response = await api.post(`/visits/${selectedVisit.id}/medicines`, {
+        medicines: selectedVisit.Medicines,
+      });
 
       if (response.status === 200 || response.status === 201) {
         const updatedMeds = response.data?.medicines || selectedVisit.Medicines;
@@ -130,8 +135,7 @@ function PatientDetails() {
         alert("Medicines saved successfully!");
       }
     } catch (err) {
-      const msg =
-        err.response?.data?.message || "Failed to save medicines";
+      const msg = err.response?.data?.message || "Failed to save medicines";
       setSaveMedicinesError(msg);
       alert(`Error: ${msg}`);
     } finally {
@@ -139,76 +143,90 @@ function PatientDetails() {
     }
   };
 
+
   const renderVitalsRow = () => {
     if (!selectedVisit) return null;
     return (
-      <Row className="mb-3">
-        <Col md={3}>
-          <div className="detail-field">
-            <span className="label">BP</span>
-            <span className="value">
-              {selectedVisit.bp_systolic || "___"} /{" "}
-              {selectedVisit.bp_diastolic || "___"} mmHg
-            </span>
-          </div>
-        </Col>
-        <Col md={3}>
-          <div className="detail-field">
-            <span className="label">Pulse</span>
-            <span className="value">{selectedVisit.pulse || "___"} bpm</span>
-          </div>
-        </Col>
-        <Col md={3}>
-          <div className="detail-field">
-            <span className="label">Temp</span>
-            <span className="value">
-              {selectedVisit.temp_c != null ? selectedVisit.temp_c : "___"} °C
-            </span>
-          </div>
-        </Col>
-        <Col md={3}>
-          <div className="detail-field">
-            <span className="label">SpO₂</span>
-            <span className="value">
-              {selectedVisit.spo2 != null ? `${selectedVisit.spo2}%` : "___"}
-            </span>
-          </div>
-        </Col>
-      </Row>
+      
+          <Row className="mb-3">
+            <Col md={3}>
+              <div className="detail-field">
+                <span className="label">BP</span>
+                <span className="value">
+                  {selectedVisit.bp_systolic || "___"} /{" "}
+                  {selectedVisit.bp_diastolic || "___"} mmHg
+                </span>
+              </div>
+            </Col>
+            <Col md={3}>
+              <div className="detail-field">
+                <span className="label">Pulse</span>
+                <span className="value">
+                  {selectedVisit.pulse || "___"} bpm
+                </span>
+              </div>
+            </Col>
+            <Col md={3}>
+              <div className="detail-field">
+                <span className="label">Temp</span>
+                <span className="value">
+                  {selectedVisit.temp_f != null ? selectedVisit.temp_f : "___"}{" "}
+                  °C
+                </span>
+              </div>
+            </Col>
+            <Col md={3}>
+              <div className="detail-field">
+                <span className="label">SpO₂</span>
+                <span className="value">
+                  {selectedVisit.spo2 != null
+                    ? `${selectedVisit.spo2}%`
+                    : "___"}
+                </span>
+              </div>
+            </Col>
+          </Row>
     );
   };
 
   const renderAnthropometricsRow = () => {
     if (!selectedVisit) return null;
     return (
-      <Row className="mb-3">
-        <Col md={4}>
-          <div className="detail-field">
-            <span className="label">Weight</span>
-            <span className="value">
-              {selectedVisit.weight_kg != null
-                ? `${selectedVisit.weight_kg} kg`
-                : "___"}
-            </span>
-          </div>
-        </Col>
-        <Col md={4}>
-          <div className="detail-field">
-            <span className="label">Height</span>
-            <span className="value">
-              {selectedVisit.height_cm != null
-                ? `${selectedVisit.height_cm} cm`
-                : "___"}
-            </span>
-          </div>
-        </Col>
-        <Col md={4}>
-          <div className="detail-field">
-            <span className="label">BMI</span>
-            <span className="value">
-              {selectedVisit.bmi != null ? `${selectedVisit.bmi} kg/m²` : "___"}
-            </span>
-          </div>
+      <Row className="mb-3 align-items-start">
+        <Col md={2}></Col>
+        <Col md={10}>
+          <Row className="mb-3">
+            <Col md={4}>
+              <div className="detail-field">
+                <span className="label">Weight</span>
+                <span className="value">
+                  {selectedVisit.weight_kg != null
+                    ? `${selectedVisit.weight_kg} kg`
+                    : "___"}
+                </span>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="detail-field">
+                <span className="label">Height</span>
+                <span className="value">
+                  {selectedVisit.height_cm != null
+                    ? `${selectedVisit.height_cm} cm`
+                    : "___"}
+                </span>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="detail-field">
+                <span className="label">BMI</span>
+                <span className="value">
+                  {selectedVisit.bmi != null
+                    ? `${selectedVisit.bmi} kg/m²`
+                    : "___"}
+                </span>
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
     );
@@ -331,8 +349,20 @@ function PatientDetails() {
                   </Button>
 
                   <div>
-                    <h1 className="patient-name">
+                    <h1 className="patient-name pe-2">
                       {patient?.full_name || "Patient"}
+                      {" ( "}
+                      {patient?.age_years != null && (
+                        <span className="me-1">
+                          {patient.age_years} Y ,
+                          {/* {patient.age_months != null &&
+                            ` ${patient.age_months} m`} */}
+                        </span>
+                      )}
+                      {patient?.gender && (
+                        <span className="me-1">{patient.gender}</span>
+                      )}
+                      {")"}
                       <Button
                         variant="primary"
                         size="sm"
@@ -343,21 +373,12 @@ function PatientDetails() {
                       </Button>
                     </h1>
                     <div className="patient-meta">
-                      {patient?.reg_no && (
-                        <span className="me-3">Reg. No: {patient.reg_no}</span>
-                      )}
-                      {patient?.gender && (
-                        <span className="me-3">Gender: {patient.gender}</span>
-                      )}
-                      {patient?.age_years != null && (
-                        <span className="me-3">
-                          Age: {patient.age_years} yrs
-                          {patient.age_months != null &&
-                            ` ${patient.age_months} m`}
-                        </span>
-                      )}
+                      {patient?.id && (
+                        <span className="me-2"> {patient.id}</span>
+                      )}{" "}
+                      |
                       {patient?.mobile && (
-                        <span className="me-3">Mob: {patient.mobile}</span>
+                        <span className="mx-2">{patient.mobile}</span>
                       )}
                     </div>
                   </div>
@@ -518,22 +539,24 @@ function PatientDetails() {
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  {(
-                                    (Array.isArray(selectedVisit.Medicines) && selectedVisit.Medicines.length > 0)
-                                      ? selectedVisit.Medicines
-                                      : [
-                                          {
-                                            id: `new-${selectedVisit.id || '0'}-0`,
-                                            type: "",
-                                            name: "",
-                                            dosage: "",
-                                            when_to_take: "",
-                                            frequency: "",
-                                            duration_days: null,
-                                            qty: null,
-                                            note: "",
-                                          },
-                                        ]
+                                  {(Array.isArray(selectedVisit.Medicines) &&
+                                  selectedVisit.Medicines.length > 0
+                                    ? selectedVisit.Medicines
+                                    : [
+                                        {
+                                          id: `new-${
+                                            selectedVisit.id || "0"
+                                          }-0`,
+                                          type: "",
+                                          name: "",
+                                          dosage: "",
+                                          when_to_take: "",
+                                          frequency: "",
+                                          duration_days: null,
+                                          qty: null,
+                                          note: "",
+                                        },
+                                      ]
                                   ).map((med, index) => (
                                     <tr key={med.id || index}>
                                       <td>{index + 1}</td>
@@ -544,11 +567,17 @@ function PatientDetails() {
                                           size="sm"
                                           value={med.dosage || ""}
                                           onChange={(e) =>
-                                            handleMedicineChange(index, "dosage", e.target.value)
+                                            handleMedicineChange(
+                                              index,
+                                              "dosage",
+                                              e.target.value
+                                            )
                                           }
                                           className="medicine-dropdown"
                                         >
-                                          <option value="">Select Dosage</option>
+                                          <option value="">
+                                            Select Dosage
+                                          </option>
                                           {DOSAGE_OPTIONS.map((dosage) => (
                                             <option key={dosage} value={dosage}>
                                               {dosage}
@@ -561,7 +590,11 @@ function PatientDetails() {
                                           size="sm"
                                           value={med.when_to_take || ""}
                                           onChange={(e) =>
-                                            handleMedicineChange(index, "when_to_take", e.target.value)
+                                            handleMedicineChange(
+                                              index,
+                                              "when_to_take",
+                                              e.target.value
+                                            )
                                           }
                                           className="medicine-dropdown"
                                         >
@@ -578,11 +611,17 @@ function PatientDetails() {
                                           size="sm"
                                           value={med.frequency || ""}
                                           onChange={(e) =>
-                                            handleMedicineChange(index, "frequency", e.target.value)
+                                            handleMedicineChange(
+                                              index,
+                                              "frequency",
+                                              e.target.value
+                                            )
                                           }
                                           className="medicine-dropdown"
                                         >
-                                          <option value="">Select Frequency</option>
+                                          <option value="">
+                                            Select Frequency
+                                          </option>
                                           {FREQUENCY_OPTIONS.map((freq) => (
                                             <option key={freq} value={freq}>
                                               {freq}
@@ -700,7 +739,9 @@ function PatientDetails() {
                       <Button
                         variant="outline-primary"
                         onClick={() =>
-                          navigate(`/patients/${patient.id}/visits/${selectedVisitId}/print`)
+                          navigate(
+                            `/patients/${patient.id}/visits/${selectedVisitId}/print`
+                          )
                         }
                       >
                         <FiPrinter className="me-2" />

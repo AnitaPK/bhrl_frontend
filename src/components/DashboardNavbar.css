@@ -1,14 +1,14 @@
 .dashboard-navbar {
-  background: linear-gradient(90deg, #ffffff, #ecfdf3);
+  background: linear-gradient(90deg, #ffffff, #f5fff9);
 
   /* background-color:rgb(252, 255, 246); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   /* gap: 10px; */
-  padding: 7px 30px;
+  padding: 7px 15px 7px 7px;
   position: sticky;
-  top: 80px;
+  top: 0px;
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -16,22 +16,36 @@
 .right-navbar {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   /* gap: 10px; */
 }
-
-.navbar-item {
+.left-navbar{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  color: #000;
-  transition: opacity 0.2s;
-  min-width: 50px;
 }
+.menus{
+  display: flex;
+  /* justify-content: center; */
+}
+.menu-item{
+  /* font-weight: bold; */
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+.menu-list-item{
+  color: #000;
+  text-decoration: none;
+    font-size: 17px;
+  font-weight: 400;
+}
+.menu-list-item:hover{
+  color: #444;
 
-.navbar-item:hover {
-  opacity: 0.8;
+}
+.logo-image{
+  width: 60px;
+  height: 50px;
+  padding-left: 1rem;
 }
 
 .navbar-icon {
@@ -95,7 +109,7 @@
 }
 
 .profile-user-icon {
-  font-size: 20px;
+  font-size: 17px;
   color: 000;
 }
 

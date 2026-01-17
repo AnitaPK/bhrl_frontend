@@ -193,7 +193,7 @@ function AddAppointmentModal({ show, onHide, patient, onAppointmentCreated }) {
                     <div className="d-flex justify-content-between align-items-center">
                       <div>
                         <div className="fw-500">{pat.full_name}</div>
-                        <small className="text-muted">Reg. No: {pat.reg_no || '-'}</small>
+                        <small className="text-muted">Reg. No: {pat.id || '-'}</small>
                       </div>
                       <small className="text-muted">{pat.mobile}</small>
                     </div>

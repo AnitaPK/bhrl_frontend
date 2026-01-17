@@ -226,7 +226,14 @@ function Dashboard() {
                         </thead>
                         <tbody>
                           {dashboardData.recentVisits.map((visit) => (
-                            <tr key={visit.id}>
+                            <tr 
+                            key={visit.id}
+                            onClick={() =>
+                                    visit.Patient &&
+                                    navigate(`/patients/${visit.Patient.id}`)
+                                  }
+                            style={{cursor:'pointer'}}
+                                  >
                               <td>
                                 <Button
                                   variant="link"

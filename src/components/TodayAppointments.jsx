@@ -148,11 +148,11 @@ function TodayAppointments({
             <div
               key={appt.id}
               className="appointment-item"
-              onClick={() => {
-                if (onPatientClick && appt.Patient?.id) {
-                  onPatientClick(appt.Patient.id);
-                }
-              }}
+              // onClick={() => {
+              //   if (onPatientClick && appt.Patient?.id) {
+              //     onPatientClick(appt.Patient.id);
+              //   }
+              // }}
             >
               {index > 0 && <div className="appointment-divider" />}
 
